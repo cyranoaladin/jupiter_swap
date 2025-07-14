@@ -1,0 +1,92 @@
+{
+  "compilerOptions": {
+    // Configuration de base TypeScript
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    
+    // Configuration des plugins Next.js
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    
+    // Configuration des chemins d'alias pour une meilleure organisation
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/constants": ["./src/constants/index.ts"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/styles/*": ["./src/styles/*"]
+    },
+    
+    // Configuration stricte pour la qualité du code
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    
+    // Configuration pour les imports
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Configuration pour les déclarations
+    "declaration": false,
+    "declarationMap": false,
+    
+    // Configuration pour le debugging
+    "sourceMap": true,
+    "removeComments": false,
+    
+    // Configuration pour les types
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["jest", "@testing-library/jest-dom"]
+  },
+  
+  // Fichiers à inclure dans la compilation
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "tests/**/*"
+  ],
+  
+  // Fichiers à exclure de la compilation
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "coverage"
+  ],
+  
+  // Configuration spécifique pour Next.js
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
+

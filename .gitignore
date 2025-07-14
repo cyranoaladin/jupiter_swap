@@ -1,0 +1,443 @@
+# ====================================================================================================
+# GITIGNORE - JUPITER SWAP NEXT.JS DAPP
+# ====================================================================================================
+# 
+# Ce fichier définit les fichiers et dossiers à ignorer par Git pour le projet Jupiter Swap.
+# Optimisé pour Next.js, TypeScript, et l'écosystème Solana.
+# 
+# @author Manus AI
+# @version 1.0.0
+# ====================================================================================================
+
+# --------------------------------------
+# -- DÉPENDANCES NODE.JS
+# --------------------------------------
+
+# Dossiers de modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Fichiers de lock optionnels
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Cache npm
+.npm
+
+# Cache Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# --------------------------------------
+# -- NEXT.JS
+# --------------------------------------
+
+# Build de Next.js
+.next/
+out/
+
+# Cache de Next.js
+.next/cache/
+
+# Fichiers de build
+build/
+dist/
+
+# Fichiers de déploiement Vercel
+.vercel
+
+# Turbo
+.turbo
+
+# --------------------------------------
+# -- ENVIRONNEMENT ET CONFIGURATION
+# --------------------------------------
+
+# Variables d'environnement sensibles
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers de configuration locaux
+.env.*.local
+
+# Secrets et clés API
+secrets/
+keys/
+*.key
+*.pem
+
+# Configuration locale
+config.local.js
+config.local.json
+
+# --------------------------------------
+# -- TYPESCRIPT
+# --------------------------------------
+
+# Build TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Cache TypeScript
+.tscache/
+
+# --------------------------------------
+# -- OUTILS DE DÉVELOPPEMENT
+# --------------------------------------
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# Stylelint
+.stylelintcache
+
+# Cache Babel
+.babel-cache/
+
+# Cache SWC
+.swc/
+
+# --------------------------------------
+# -- TESTS
+# --------------------------------------
+
+# Coverage de tests
+coverage/
+.nyc_output/
+
+# Résultats de tests
+test-results/
+junit.xml
+
+# Cache Jest
+.jest-cache/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# --------------------------------------
+# -- ÉDITEURS ET IDE
+# --------------------------------------
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# --------------------------------------
+# -- SYSTÈMES D'EXPLOITATION
+# --------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# --------------------------------------
+# -- LOGS ET MONITORING
+# --------------------------------------
+
+# Logs généraux
+logs/
+*.log
+
+# Logs npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Logs de runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs de Sentry
+.sentryclirc
+
+# --------------------------------------
+# -- CACHE ET TEMPORAIRES
+# --------------------------------------
+
+# Cache général
+.cache/
+.temp/
+.tmp/
+
+# Cache Webpack
+.webpack/
+
+# Cache Parcel
+.parcel-cache/
+
+# Cache Rollup
+.rollup.cache/
+
+# Cache Vite
+.vite/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# --------------------------------------
+# -- BLOCKCHAIN ET SOLANA
+# --------------------------------------
+
+# Clés de wallet (CRITIQUE - Ne jamais committer)
+*.json
+!package.json
+!tsconfig.json
+!next.config.js
+!tailwind.config.js
+!*.config.json
+
+# Fichiers de keypair Solana
+id.json
+keypair.json
+wallet.json
+
+# Données de test blockchain
+test-ledger/
+validator-ledger/
+
+# Cache Anchor (si utilisé)
+.anchor/
+target/
+
+# --------------------------------------
+# -- ASSETS ET MÉDIAS
+# --------------------------------------
+
+# Images temporaires
+*.tmp.png
+*.tmp.jpg
+*.tmp.gif
+*.tmp.svg
+
+# Vidéos temporaires
+*.tmp.mp4
+*.tmp.webm
+
+# Assets générés
+generated/
+auto-generated/
+
+# --------------------------------------
+# -- DOCUMENTATION
+# --------------------------------------
+
+# Documentation générée
+docs/build/
+docs/.docusaurus/
+
+# Storybook
+storybook-static/
+
+# --------------------------------------
+# -- DÉPLOIEMENT ET CI/CD
+# --------------------------------------
+
+# Artifacts de build
+artifacts/
+releases/
+
+# Docker
+.dockerignore
+Dockerfile.local
+
+# Kubernetes
+k8s-local/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# --------------------------------------
+# -- ANALYTICS ET MONITORING
+# --------------------------------------
+
+# Données d'analytics
+analytics/
+metrics/
+
+# Rapports de performance
+lighthouse/
+performance/
+
+# Bundle analyzer
+bundle-analyzer/
+
+# --------------------------------------
+# -- SÉCURITÉ
+# --------------------------------------
+
+# Certificats SSL
+*.crt
+*.cert
+*.ca-bundle
+
+# Fichiers de sécurité
+security/
+.security/
+
+# Audit de sécurité
+security-audit/
+
+# --------------------------------------
+# -- DÉVELOPPEMENT LOCAL
+# --------------------------------------
+
+# Configuration locale de développement
+.local/
+local/
+
+# Scripts de développement personnels
+dev-scripts/
+personal/
+
+# Données de test locales
+test-data/
+mock-data/
+
+# --------------------------------------
+# -- OUTILS SPÉCIALISÉS
+# --------------------------------------
+
+# Husky
+.husky/_
+
+# Lint-staged
+.lintstagedrc*
+
+# Commitizen
+.czrc
+
+# Semantic Release
+.semantic-release/
+
+# --------------------------------------
+# -- FICHIERS SPÉCIFIQUES AU PROJET
+# --------------------------------------
+
+# Backup de configuration
+*.backup
+*.bak
+
+# Fichiers de migration
+migrations/local/
+
+# Données de développement
+dev-data/
+
+# Exports temporaires
+exports/
+temp-exports/
+
+# ====================================================================================================
+# NOTES IMPORTANTES
+# ====================================================================================================
+#
+# 1. SÉCURITÉ CRITIQUE :
+#    - Ne JAMAIS committer de clés privées, seeds, ou keypairs
+#    - Vérifier régulièrement qu'aucun secret n'est exposé
+#    - Utiliser des outils comme git-secrets pour la prévention
+#
+# 2. PERFORMANCE :
+#    - Ignorer les gros fichiers binaires
+#    - Exclure les caches pour éviter les conflits
+#    - Optimiser pour les builds CI/CD
+#
+# 3. COLLABORATION :
+#    - Garder les configurations d'IDE essentielles
+#    - Documenter les exceptions importantes
+#    - Maintenir la cohérence entre les environnements
+#
+# 4. MAINTENANCE :
+#    - Réviser régulièrement ce fichier
+#    - Adapter selon l'évolution du projet
+#    - Synchroniser avec l'équipe de développement
+#
+# ====================================================================================================
+
+
+# Sentry Config File
+.env.sentry-build-plugin
